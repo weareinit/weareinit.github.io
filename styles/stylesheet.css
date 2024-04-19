@@ -1,15 +1,126 @@
+.museomoderno-regular{
+    font-family: "MuseoModerno", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+  }
+
 body {
     width: 100vw;
     height: 100vh;
-    background-image: url('../assets/images/wide-website.png');
+    overflow: hidden;
+    background-image: url('../assets/images/website-no-wave.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-@media (max-width: 550px) {
-    body {
-        background-image: url('../assets/images/mobile.png');
+@keyframes slide-in-out-sideways {
+    0% {
+        transform: translateX(20%);
     }
+    50% {
+        transform: translateX(25%);
+    }
+    100% {
+        transform: translateX(20%);
+    }
+}
+
+.wave-website {
+    display: none;
+    z-index: -10;
+}
+
+@media (min-width: 890px) {
+    .wave-website {
+        display: block;
+        position: fixed;
+        right: -250px;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+        animation: slide-in-out-sideways 5s infinite;
+        z-index: -10;
+    }
+}
+.wave-mobile {
+    display: none;
+    z-index: -10;
+}
+
+@keyframes slide-in-out-vertically {
+    0% {
+        transform: translateY(10%);
+    }
+    50% {
+        transform: translateY(30%);
+    }
+    100% {
+        transform: translateY(10%);
+    }
+}
+
+@media (max-width: 419px) {
+    body {
+        background-image: url('../assets/images/mobile-no-wave.png');
+    }
+    .wave-website {
+        display: none;
+    }
+    
+    .wave-mobile {
+        display: block;
+        position: fixed;
+        bottom: -150px;
+        animation: slide-in-out-vertically 5s infinite;
+        
+    }
+}
+.text-box {
+    background: url('../assets/images/text-box.png') no-repeat;
+    background-size: 100% 100%;
+    width: 239px; 
+    height: 173px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.text-box:hover {
+    filter: brightness(0.8);
+    transform: translateY(-5px) scale(1.02);
+}
+
+.button-text {
+    text-align: center;
+    text-decoration: none;
+    font-family: "Zoonaji";
+    font-size: 25px;
+    color: rgb(22, 91, 112);
+}
+
+.big-title {
+    text-align: center;
+    font-family: "Zoonaji";
+    font-size: 50px;
+    color: rgb(22, 91, 112);
+    text-shadow: 0px 2px 2px rgba(133, 133, 133, 0.5);
+    margin: 0px;
+    
+}
+
+.subtitle {
+    font-size: 20px;
+    color: rgb(22, 91, 112);
+    margin-bottom: 100px;
+    font-family: "Zoonaji";
+
 }
