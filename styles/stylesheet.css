@@ -95,7 +95,7 @@ body {
 
 .text-box:hover {
   filter: brightness(0.8);
-  transform: translateY(-5px) scale(1.35);
+  transform: translateY(-5px) scale(1.05);
 }
 
 .button-text {
@@ -135,5 +135,8 @@ body {
     width: 239px;
     height: 173px;
     transform: scale(1.3);
+  }
+  .text-box:hover {
+    transform: translateY(-5px) scale(1.35);
   }
 }
