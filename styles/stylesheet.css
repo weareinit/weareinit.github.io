@@ -1,0 +1,15 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../assets/images/wide-website.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+@media (max-width: 550px) {
+    body {
+        background-image: url('../assets/images/mobile.png');
+    }
+}
